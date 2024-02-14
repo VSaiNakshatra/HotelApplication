@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="home.css">
+      
+    </head>
+    <div class="navbar">
+        <div class="logo">
+            <a href="#"><img src="./images/hotelImg.png" alt="HOTEL SITARA ELITE"></a>
+            <a class="hotelName">HOTEL SITARA ELITE</a>
+            <a href="#sec1">OUR HOTELS</a>
+            <a href="#sec2">GALLERY</a>
+            <a href="#sec3">HOLIDAYS</a>
+            <a href="#" onclick="openBookingForm()">MANAGE BOOKINGS</a>
+            <a href="#">TESTIMONIALS</a>
+            <a href="#sec5">ABOUT US</a>
+            <a href="#" onclick="displayBookingCard()">BOOK A STAY</a>
+            <button id="#">SIGN IN</button>
+          
+        </div>
+    </div>
+
+    <body>
+        <div class="bodyImg">
+            <img src="./images/hotel.jpg">
+        </div>
+
+        <section id="sec1">
+            <h2 class="ourHotels">OUR HOTELS</h2>
+            <div id="card-container" class="container"></div>
+            <script src="ourhotels.js"></script>
+        </section>
+
+        <section id="sec2">
+            <h2 class="gallery">GALLERY</h2>
+            <div id="slideshow-container" class="slideshow-container"></div>
+            <script src="gallery.js"></script>
+        </section>
+
+        <section id="sec3">
+            <h2 class="holidays">HOLIDAYS</h2>
+            <div class="slider-container">
+                <button class="arrow prev">&#10094;</button>
+                <div class="slider">
+                  <!-- Cards will be dynamically generated here -->
+                </div>
+                <button class="arrow next">&#10095;</button>
+            </div>
+            <script src="holidays.js"></script>
+        </section>
+
+        <section id="sec4">
+            <div id="bookingFormModal" class="modal"> <!-- Hidden modal for the booking form -->
+                <div class="modal-content">
+                    <span class="close" onclick="closeBookingForm()">&times;</span>
+                    <h2>Manage Booking</h2>
+                    <form id="bookingForm" action="#">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <label for="bookingNumber">Booking Number:</label>
+                        <input type="text" id="bookingNumber" name="bookingNumber" required><br><br>
+                        <input type="submit" value="Submit" onclick="submitForm()">
+                    </form>
+                </div>
+            </div>   
+            <script src="manageBookings.js"></script>
+        </section>
+
+        <section id="sec5">
+            <h2>ABOUT US</h2>
+            <div class="container" id="AboutcardContainer">
+            </div>
+            <script src="about.js"></script>
+        </section>
+
+        <section id="sec6">
+            <div class="booking-card" id="booking-card" style="display: none;">
+                <button class="close-btn" onclick="closeBookingCard()">X</button>
+                <h2>Book a stay with us !</h2>
+                <div class="date-picker">
+                    <label for="check-in">From</label>
+                    <input type="date" id="check-in" name="check-in">
+                    <label for="check-out">To</label>
+                    <input type="date" id="check-out" name="check-out">
+                </div>
+                <div class="room-counter">
+                    <div>
+                        <label for="adults">Adults</label>
+                        <button class="minus">-</button>
+                        <input type="number" id="adults" name="adults" value="1">
+                        <button class="plus">+</button>
+                    </div>
+                    <div>
+                        <label for="children">Children(0-12 Yrs)</label>
+                        <button class="minus">-</button>
+                        <input type="number" id="children" name="children" value="0">
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <button class="check-availability">BOOK NOW</button>
+                <!-- Close button -->
+                
+            </div>
+            <script src="book.js"></script>
+        </section>
+               
+
+    </body>
+
+    <footer>
+        <div class="footer-left">
+            <img src="./images/sitara.png" alt="Hotel Logo">
+            <div class="hotel-info">
+                <h3>HOTEL SITARA ELITE</h3>
+                <p>20-6/1-2, Main Road, Kakinada</p>
+                <p>Phone: 0884-2350533</p>
+                <p>Mobile: 7382477773</p>
+                <p>Email: hotelsitara@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <h3>Follow Us on </h3>
+            <ul class="social-icons">
+                
+                <li><a href="#"><img src="./images/wp.png" alt="WhatsApp"></a></li>
+                <li><a href="#"><img src="./images/insta.png" alt="Instagram"></a></li>
+                <!-- Add more social media icons as needed -->
+            </ul>
+        </div>
+    </footer>
+</html>

@@ -1,0 +1,494 @@
+.navbar{
+    background-color: black !important;
+    height: 10%;
+    align-items: center;
+    position: fixed;
+    margin-top: -8px;
+    width: -webkit-fill-available;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+}
+
+
+
+.hotelName{
+    color: aliceblue;
+}
+
+.logo .img{ 
+    align-items: center;  
+}
+
+.logo .hotelName {
+    margin-left: -30px;
+}
+
+.logo a{
+    margin: 10px;
+    padding: 15px;
+    color: white;
+    text-decoration: none;  
+}
+
+.logo a:last-child{
+    margin-right: 0; 
+}
+
+.bodyImg img{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.ourHotels{
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+
+
+
+/*Styling for Our Hotels Section*/
+
+#sec1{
+    padding-top: 60px;
+}
+.container {
+    display: flex; /* Use Flexbox */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center the cards horizontally */
+    
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 10px; /* Add margin between cards */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+
+/*********SECTION 2*****************/
+/* Styling for Gallery*/
+
+#sec2{
+    padding-top: 50px;
+}
+.gallery{
+    text-align: center;
+    
+    font-weight: bold;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px; /* Adjusted to accommodate navbar */
+    z-index: 1; /* Set z-index to lower than navbar */
+}
+
+
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+#sec2 .slide img {
+    margin-left: -12%;
+    width: 125%;
+    height: 80%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/***********HOLIDAYS*******************/
+
+#sec3{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#sec3 .slider-container {
+position: relative;
+overflow: hidden;
+}
+
+#sec3 .slider {
+display: flex;
+transition: transform 0.5s ease;
+}
+
+#sec3  .card {
+flex: 0 0 auto;
+width: 300px;
+margin-right: 20px;
+border: 1px solid #ccc;
+border-radius: 8px;
+overflow: hidden;
+}
+
+#sec3  .card img {
+width: 100%;
+height: auto;
+border-bottom: 1px solid #ccc;
+}
+
+#sec3 .card h2 {
+margin: 10px;
+}
+
+#sec3 .card p {
+margin: 10px;
+}
+
+#sec3 .arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: rgba(0, 0, 0, 0.5);
+color: white;
+font-size: 24px;
+border: none;
+cursor: pointer;
+padding: 10px;
+z-index: 1;
+}
+
+#sec3 .prev {
+left: 0;
+}
+
+#sec3 .next {
+right: 0;
+}
+
+#sec3 .card p {
+    margin: 10px;
+    text-align: justify; /* Add this line */
+    font-weight: 300;
+}
+
+#sec3 .card img {
+    width: 100%; /* Set the width to 100% to make all images fill the container */
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensure the image covers the entire container without distortion */
+}
+
+
+
+
+
+
+  /**********SECTION 4*****************/
+/* Your CSS styles here */
+
+/* Style for modal */
+#sec4 .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/* Modal content */
+
+#sec4 .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+#sec4 .modal-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%; /* Width of the modal */
+    max-width: 400px; /* Maximum width of the modal */
+    color: white; /* Text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+
+/* Close button */
+#sec4 .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#sec4 .close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#sec4 .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+#sec4 nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sec4 nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#sec4 nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#sec4 nav ul li a:hover {
+    color: yellow;
+}
+
+
+/**********About US**************/
+/* Container holding the image and the text */
+#sec5  .container {
+  position: relative;
+  text-align: center;
+}
+
+#sec5 h2{
+    text-align: center;
+
+}
+/* Bottom right text */
+#sec5 .text-block {
+    height: 35%;
+    width: 30%;
+    position: absolute;
+    bottom: 16%;
+    right: 30%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+
+/***********BOOK A STAY*****************/
+
+  
+  .booking-card {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 55px;
+    max-width: 30%;
+    margin: auto;
+  }
+  
+  .search-input,
+  .promo-input,
+  .date-picker input,
+  .room-counter input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .date-picker label {
+    display: block;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .room-counter label {
+    display: block;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: white;
+  }
+  
+  
+  .date-picker,
+  .room-counter {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .room-counter div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .minus,
+  .plus {
+    background: #ddd;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .minus:hover,
+  .plus:hover {
+    background: #ccc;
+  }
+  
+  .check-availability {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .check-availability:hover {
+    background: #e69500;
+  }
+  
+  .date-picker label{
+    color: white;
+  }
+
+  #sec6 h2{
+    text-align: center;
+    color: white;
+  }
+
+  #sec6 .close-btn{
+    margin-left: 100%;
+  }
+
+  #sec6 .booking-card {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 30%;
+    top: 20%;
+    width: 43%; /* Full width */
+    height: 43%; /* Full height */
+    overflow: auto; /* Enable scrolling if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/*********FOOTER*************/
+
+footer {
+    background-color: black; /* Set background color */
+    color: #fff; /* Set text color */
+    padding: 20px; /* Add padding */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.footer-left {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin-left: 35%;
+}
+
+.footer-left img {
+    margin-top: -35%;
+    width: 30px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.hotel-info h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.2rem; /* Set font size */
+}
+
+.hotel-info p {
+    margin: 5px 0; /* Add margin top and bottom */
+}
+
+.social-icons {
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for layout */
+}
+
+.social-icons li {
+    margin-right: 10px; /* Add right margin for spacing */
+}
+
+.social-icons img {
+    width: 30px; /* Set width of social media icons */
+    height: 30px; /* Set height of social media icons */
+}
+
+.footer-right{
+    margin-right: 20px;
+    margin-right: 25%;
+    margin-top: -4%;
+
+}
